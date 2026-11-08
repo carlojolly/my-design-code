@@ -91,13 +91,15 @@ npx @animate-ui/cli@latest animate all   # only when you want motion on shadcn p
 ## Provenance & taste feedback
 
 - [`skills/frontend-design/references/provenance.md`](skills/frontend-design/references/provenance.md) — every default pattern → source + skill path  
-- [`skills/frontend-design/references/taste-memory.md`](skills/frontend-design/references/taste-memory.md) — preferred / rejected / replaced  
+- [`skills/frontend-design/references/taste-memory.md`](skills/frontend-design/references/taste-memory.md) — preferred / rejected / proposed / replaced  
+- [`skills/frontend-design/references/typography.md`](skills/frontend-design/references/typography.md) — Onest default, font candidates, hard must-nots, Baseline hero + section-label recipes  
+- [`skills/frontend-design/assets/baseline-preferences-specimen/`](skills/frontend-design/assets/baseline-preferences-specimen/) — interactive specimen (hero type, candidates, labels, fullscreen nav, footer)
 
 When building UI, agents tag `decision.md` and the Components table in `agents.md` with `provenance_id` and `source:…`.
 
 When you dislike something, say so. The agent should find the root (source + skill file), ask whether to **remove**, **replace**, or keep as a one-off, then update the skill so it does not repeat.
 
-Mockups under `skills/frontend-design/assets/` are **quality references** (Code XR, FluxEdit, Palmatech) — craft patterns only, not forced brand colors.
+Mockups under `skills/frontend-design/assets/` are **quality references** (Code XR, FluxEdit, Palmatech) — craft patterns only, not forced brand colors. Baseline Tennis preferences are recorded as reusable guidance (not a rebuild of that site).
 
 ## Layout
 

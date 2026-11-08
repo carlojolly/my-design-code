@@ -49,6 +49,50 @@ Open images under `../assets/` when designing.
 - Glass schedule widget with location + level tags (`mock.palmatech-glass-schedule`)
 - Feature strip with short lines — one idea each
 
+## Baseline footer (optional marketing composition)
+
+**Provenance:** `craft.footer-baseline` · `source:user-feedback:baseline` (measurements `source:baseline-reference`)  
+**Specimen:** [`../assets/baseline-preferences-specimen/`](../assets/baseline-preferences-specimen/)  
+Optional reusable composition for marketing sites. Adapt palette, copy, link groups, and radii to the product. **Never** copy fictional Baseline contact information into a real project.
+
+### Exact reference shell
+
+| Token | Value |
+|-------|--------|
+| Background | Deep navy `#0f2f63` |
+| Text | White (check contrast on secondary lines; do not blindly copy opacity values) |
+| Outer radius | 2rem |
+| Page inset | 0.5rem mobile / 0.75rem desktop |
+| Top gap | 0.75rem |
+| Padding | 3.5rem 1.5rem mobile / 4rem 2.5rem desktop |
+
+### Layer A — CTA band
+
+- Large two-line heading (e.g. “Ready to / play?”)
+- Type: Onest **500**, **3.75rem**, line-height **0.92**, tight tracking
+- One contrasting white pill CTA
+- Desktop: heading left, CTA right, bottom-aligned
+- Mobile: stacked
+- Bottom divider + **3.5rem** padding below the band
+
+Apply **proposed** section-label guidance (`type.section-label-sentence`) if a label is needed — do **not** import the rejected tracked-caps eyebrow (`type.section-label-tracked-caps`) into this footer.
+
+### Layer B — Information grid
+
+- Brand, short description, and contact details
+- Three clearly grouped navigation columns
+- Desktop columns: `1.4fr 1fr 1fr 1fr`
+- Gap **2.5rem**; vertical padding **3.5rem**
+- Responsive stacking on small screens
+
+### Layer C — Utility row
+
+- Copyright, social links, and legal links
+- Thin top divider; **2rem** top padding
+- Responsive wrapping or stacking
+
+Use restrained **1px** dividers and readable secondary text. Prefer compositional principles over hex cargo-cult: strong closing invitation, clear hierarchy, generous spacing, organized links, restrained utility row.
+
 ## Stack alignment
 
 Prefer implementing these patterns with:
@@ -56,4 +100,5 @@ Prefer implementing these patterns with:
 1. shadcn primitives (`prim.*`)
 2. 21st sections when a catalog block fits (`catalog.21st-sections`)
 3. Motion per `motion-stack.md`
-4. Impeccable pass after a draft exists
+4. Typography + labels per `typography.md` (owned overrides beat companion defaults)
+5. Impeccable pass after a draft exists

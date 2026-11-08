@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Baseline preferences specimen — frontend-design</title>
+    <meta
+      name="description"
+      content="Reference specimen for approved Baseline typography, nav, and footer patterns. Not a production site."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Manrope:wght@400;500;600&family=Onest:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./specimen.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div data-page-root>
+      <header class="site-header">
+        <div class="brand">Baseline preferences specimen</div>
+        <button
+          type="button"
+          class="menu-trigger"
+          data-nav-open
+          aria-expanded="false"
+          aria-controls="fullscreen-nav"
+        >
+          Menu
+        </button>
+      </header>
+
+      <p class="banner">
+        <strong>Reference artifact only.</strong>
+        Approved recipes and proposed candidates for future builds — not a tennis website rebuild.
+        Rejected comparison styles are isolated and must not be copied into production.
+      </p>
+
+      <main id="main">
+        <section class="hero" aria-label="Approved hero typography">
+          <div class="hero__media" role="img" aria-label="Darkened tennis court photograph"></div>
+          <p class="hero__kicker">
+            Provenance <code>type.hero-baseline</code> · Onest 500 · short confident marketing headlines
+          </p>
+          <h1 class="hero__title" data-hero-title data-words="Own The Court">Own The Court</h1>
+        </section>
+
+        <section class="section" id="typography" aria-labelledby="type-heading">
+          <span class="meta-chip meta-chip--ok">Confirmed preferred</span>
+          <h2 id="type-heading">Typography pool</h2>
+          <p class="lede">
+            Shared specimen copy below so comparisons stay meaningful. Usually use one family well; keep
+            candidates out of the approved default pool until visual approval.
+          </p>
+
+          <div class="font-grid">
+            <article class="font-card font-onest" data-status="approved">
+              <span class="meta-chip meta-chip--ok">Approved · Onest</span>
+              <h3>Onest</h3>
+              <p class="roles">Display 500 · supporting 400 · https://fonts.google.com/specimen/Onest</p>
+              <div class="specimen-block">
+                <p class="headline">Own The Court</p>
+                <p class="paragraph">
+                  Coaching, match play, and academy pathways built for players who want a clearer path from
+                  first lesson to competition.
+                </p>
+                <p class="nav-sample">Programs · Coaching · Membership · Contact</p>
+                <p class="label-sample proposed-label">Training programs</p>
+              </div>
+            </article>
+
+            <article class="font-card font-general" data-status="proposed">
+              <span class="meta-chip meta-chip--proposed">Proposed candidate</span>
+              <h3>General Sans</h3>
+              <p class="roles">
+                Restrained headings + supporting UI · https://www.fontshare.com/fonts/general-sans/
+              </p>
+              <div class="specimen-block">
+                <p class="headline">Own The Court</p>
+                <p class="paragraph">
+                  Coaching, match play, and academy pathways built for players who want a clearer path from
+                  first lesson to competition.
+                </p>
+                <p class="nav-sample">Programs · Coaching · Membership · Contact</p>
+                <p class="label-sample proposed-label" style="font-family: inherit">Training programs</p>
+              </div>
+            </article>
+
+            <article class="font-card font-instrument" data-status="proposed">
+              <span class="meta-chip meta-chip--proposed">Proposed candidate</span>
+              <h3>Instrument Sans</h3>
+              <p class="roles">
+                Editorial headings + supporting text · https://fonts.google.com/specimen/Instrument+Sans
+              </p>
+              <div class="specimen-block">
+                <p class="headline">Own The Court</p>
+                <p class="paragraph">
+                  Coaching, match play, and academy pathways built for players who want a clearer path from
+                  first lesson to competition.
+                </p>
+                <p class="nav-sample">Programs · Coaching · Membership · Contact</p>
+                <p class="label-sample proposed-label" style="font-family: inherit">Training programs</p>
+              </div>
+            </article>
+
+            <article class="font-card font-manrope" data-status="proposed">
+              <span class="meta-chip meta-chip--proposed">Proposed candidate</span>
+              <h3>Manrope</h3>
+              <p class="roles">
+                Clean structured product type · https://fonts.google.com/specimen/Manrope
+              </p>
+              <div class="specimen-block">
+                <p class="headline">Own The Court</p>
+                <p class="paragraph">
+                  Coaching, match play, and academy pathways built for players who want a clearer path from
+                  first lesson to competition.
+                </p>
+                <p class="nav-sample">Programs · Coaching · Membership · Contact</p>
+                <p class="label-sample proposed-label" style="font-family: inherit">Training programs</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="section" id="labels" aria-labelledby="labels-heading">
+          <h2 id="labels-heading">Section labels</h2>
+          <p class="lede">
+            Rejection is the <em>treatment</em>, not Onest. Uppercase remains fine on the approved hero.
+          </p>
+          <div class="label-compare">
+            <div
+              class="label-panel label-panel--rejected"
+              data-specimen-role="rejected-example"
+              aria-label="Rejected label treatment — do not use"
+            >
+              <span class="meta-chip meta-chip--rejected">Rejected · do not copy</span>
+              <p class="rejected-label">Training Programs</p>
+              <p class="demo-heading">Academy pathways</p>
+              <p class="note">
+                Recipe: 0.75rem / weight 500 / uppercase / 0.22em tracking
+                (<code>(type.section-label-tracked-caps)</code>
+              </p>
+            </div>
+            <div class="label-panel label-panel--proposed">
+              <span class="meta-chip meta-chip--proposed">Proposed default · awaiting visual approval</span>
+              <p class="proposed-label">Training programs</p>
+              <p class="demo-heading">Academy pathways</p>
+              <p class="note">
+                Sentence case · same family · ~0.875–1rem · weight 400/500 · tracking ≤ 0.02em
+                <code>(type.section-label-sentence)</code>
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="section" id="nav-docs" aria-labelledby="nav-heading">
+          <span class="meta-chip meta-chip--ok">Approved interaction</span>
+          <h2 id="nav-heading">Fullscreen navigation</h2>
+          <p class="lede">
+            Open with the header Menu control. Escape, close, and in-menu links dismiss. Rapid toggle should
+            cancel stale animations. Provenance <code>motion.fullscreen-nav-baseline</code>.
+          </p>
+          <p>
+            <button type="button" class="menu-trigger" data-nav-stress>Stress-toggle open/close ×6</button>
+          </p>
+        </section>
+      </main>
+
+      <div class="page-shell">
+        <footer class="footer-baseline" id="footer" aria-label="Baseline footer composition specimen">
+          <div class="footer-cta">
+            <h2>Ready to<br />play?</h2>
+            <a class="pill" href="#typography">Book a visit</a>
+          </div>
+
+          <div class="footer-grid">
+            <div class="footer-brand">
+              <div class="brand">Specimen Club</div>
+              <p>Fictional specimen copy for layout review. Do not reuse these contacts in a real project.</p>
+              <p><a href="mailto:hello@specimen.example">hello@specimen.example</a></p>
+            </div>
+            <div class="footer-cols">
+              <h3>Programs</h3>
+              <ul>
+                <li><a href="#typography">Juniors</a></li>
+                <li><a href="#labels">Adults</a></li>
+                <li><a href="#nav-docs">Performance</a></li>
+              </ul>
+            </div>
+            <div class="footer-cols">
+              <h3>Club</h3>
+              <ul>
+                <li><a href="#typography">Coaching</a></li>
+                <li><a href="#labels">Membership</a></li>
+                <li><a href="#footer">Facilities</a></li>
+              </ul>
+            </div>
+            <div class="footer-cols">
+              <h3>Visit</h3>
+              <ul>
+                <li><a href="#footer">Hours</a></li>
+                <li><a href="#footer">Directions</a></li>
+                <li><a href="#footer">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer-util">
+            <span>© Specimen only — not Baseline contact data</span>
+            <div class="footer-util__links">
+              <a href="#footer">Instagram</a>
+              <a href="#footer">Privacy</a>
+              <a href="#footer">Terms</a>
+            </div>
+          </div>
+        </footer>
+      </div>
+
+      <aside class="checks" aria-label="Verification notes">
+        <p>
+          Docs: <a href="../../references/typography.md">typography.md</a> ·
+          <a href="../../references/motion-stack.md">motion-stack.md</a> ·
+          <a href="../../references/ui-craft-patterns.md">ui-craft-patterns.md</a> ·
+          <a href="../../references/taste-memory.md">taste-memory.md</a>
+        </p>
+        <p data-font-report>Checking font loads…</p>
+      </aside>
+    </div>
+
+    <div
+      class="nav-overlay"
+      id="fullscreen-nav"
+      data-nav-overlay
+      aria-hidden="true"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Site menu"
+    >
+      <div class="nav-overlay__backdrop" data-nav-backdrop></div>
+      <div class="nav-overlay__panel" data-nav-panel>
+        <div class="nav-overlay__top">
+          <div class="nav-overlay__brand">Specimen Club</div>
+          <button type="button" class="nav-close" data-nav-close aria-label="Close menu">
+            <span class="nav-close__icon" data-nav-close-icon aria-hidden="true">✕</span>
+          </button>
+        </div>
+        <ul class="nav-links">
+          <li><a href="#typography" data-nav-link>Programs</a></li>
+          <li><a href="#labels" data-nav-link>Coaching</a></li>
+          <li><a href="#nav-docs" data-nav-link>Membership</a></li>
+          <li><a href="#footer" data-nav-link>Contact</a></li>
+        </ul>
+        <div class="nav-overlay__bottom">
+          <a class="nav-cta" href="#footer" data-nav-link>Book a visit</a>
+          <div class="nav-social">
+            <a href="#footer" data-nav-link>Instagram</a>
+            <a href="#footer" data-nav-link>YouTube</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./specimen.js" defer></script>
+  </body>
+</html>
