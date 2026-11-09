@@ -16,6 +16,7 @@ Read references on demand (do not load everything at once):
 - `references/twentyfirst-dev.md` — 21st CLI/MCP usage
 - `references/a11y-responsive.md` — accessibility + responsive review
 - `references/definition-of-done.md` — UI approved gates
+- `references/typography.md` — font must-nots + approved Onest default
 - `assets/` — quality reference images
 - `assets/baseline-preferences-specimen/` — interactive specimen for Baseline type, nav, footer, and rejected-vs-proposed labels
 

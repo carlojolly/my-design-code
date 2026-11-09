@@ -101,12 +101,26 @@ When you dislike something, say so. The agent should find the root (source + ski
 
 Mockups under `skills/frontend-design/assets/` are **quality references** (Code XR, FluxEdit, Palmatech) — craft patterns only, not forced brand colors. Baseline Tennis preferences are recorded as reusable guidance (not a rebuild of that site).
 
+## Templates app
+
+Live UI template gallery (Next.js + Tailwind + shadcn) lives in [`templates-app/`](templates-app/):
+
+```bash
+cd templates-app
+npm install
+npm run dev
+```
+
+- Templates index: `/templates`
+- First template: **Glassmorphism** at `/templates/glassmorphism` (`adjustable-glass-dashboard`)
+
 ## Layout
 
 ```text
 skills/
   frontend-design/
   backend-engineering/
+templates-app/    # Next.js template gallery (glassmorphism first)
 .cursor/mcp.json(.example)
 .mcp.json(.example)
 .claude/skills/   # impeccable + links to our skills

@@ -27,10 +27,7 @@ Separate **confirmed** (user-approved) preferences from **proposed** alternative
 - 2026-11-08 — id:`type.no-space-grotesk` — do **not** use Space Grotesk on this user’s projects. Personal preference rule, not a claim that the font is objectively bad. Source:`user-feedback:baseline`
 - 2026-11-08 — id:`type.no-decorative-mono` — do **not** use monospace for expressive headings, navigation, marketing copy, section labels, badges, or decorative “technical” styling. Keep monospace only when function requires it (e.g. code examples). Tabular numbers do not require a monospace family. Source:`user-feedback:baseline`
 - 2026-11-09 — id:`type.no-bullet-char` — do **not** use the bullet character **•** (U+2022) in UI copy, labels, separators, or decorative lists. Prefer plain words, commas, en dashes, or structured lists without that glyph. Source:`user-feedback`
-
-<!-- Example:
-- 2026-11-08 — id:motion.animate-ui-opt-in misuse — disliked constant motion on form controls — action: keep Animate UI opt-in only; never auto-animate inputs — replaced_by: prim.input
--->
+- 2026-11-09 — id:`type.no-default-serif-ui` — rejected Times / Times New Roman / Georgia / browser-default serif for template chrome and product UI (including when broken CSS falls back to that stack). Replace with wired **Onest**. Source:`user-feedback`
 
 ## Proposed (awaiting visual approval)
 
@@ -51,6 +48,6 @@ _(none yet — proposed replacements above are not confirmed)_
 
 ## Scope notes (do not over-infer)
 
-- Confirmed preferences cover **hero typography**, **fullscreen nav motion**, **footer composition**, **Onest**, and the two rejections above — not every aspect of Baseline, not its entire animation system, and not blanket approval of uppercase, dots, badges, or footer column headings.
+- Confirmed preferences cover **hero typography**, **fullscreen nav motion**, **footer composition**, **Onest**, and the typed rejections above — not every aspect of Baseline, not its entire animation system, and not blanket approval of uppercase, dots, badges, or footer column headings.
 - Uppercase remains appropriate where already approved (e.g. Baseline hero). Do not ban uppercase globally because the section-label treatment was rejected.
 - Do not expand the rejected-font list beyond what the user has stated.
