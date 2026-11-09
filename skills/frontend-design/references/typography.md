@@ -14,6 +14,8 @@ Specimen: [`../assets/baseline-preferences-specimen/`](../assets/baseline-prefer
 | Do **not** use monospace for expressive headings, navigation, marketing copy, section labels, badges, or decorative “technical” styling | `type.no-decorative-mono` · `source:user-feedback:baseline` | rejected |
 | Retain monospace only when function requires it (code examples, true code UI). Tabular numbers → `font-variant-numeric: tabular-nums`, not a mono family | same | active rule |
 | Do **not** reproduce Baseline’s small uppercase label recipe as a default: **0.75rem / weight 500 / uppercase / 0.22em tracking** | `type.section-label-tracked-caps` · `source:user-feedback:baseline` | rejected |
+| Do **not** ship Times / Times New Roman / Georgia / browser-default **serif** for product UI chrome, template headers, nav, or body | `type.no-default-serif-ui` · `source:user-feedback` | rejected |
+| Do **not** leave font CSS miswired (`--font-sans: var(--font-sans)` circular, Geist vars unused) so the UI falls back to that serif stack | same | rejected |
 | Choosing an approved font does **not** automatically produce good typography — still craft scale, weight, leading, tracking, contrast, and wrapping | `source:our-skill` | active |
 | Preserve existing anti-defaults: avoid Inter / Roboto / Arial as the expressive brand face (`anti.inter-everywhere`). Do **not** expand the rejected-font list with unstated personal dislikes | `source:impeccable` + this file | active |
 

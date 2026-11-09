@@ -173,8 +173,9 @@
   background: var(--gw-background);
   color: var(--gw-ink);
   font:
-    14px/1.5 "Segoe UI",
-    Arial,
+    400 14px/1.5 var(--font-onest),
+    ui-sans-serif,
+    system-ui,
     sans-serif;
   letter-spacing: -0.012em;
   font-variant-numeric: tabular-nums;
@@ -361,8 +362,10 @@
   display: grid;
   place-items: center;
   font:
-    600 12px Georgia,
-    serif;
+    600 12px var(--font-onest),
+    ui-sans-serif,
+    system-ui,
+    sans-serif;
 }
 .gw-stage {
   display: flex;

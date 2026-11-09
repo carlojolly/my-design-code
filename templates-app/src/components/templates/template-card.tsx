@@ -33,7 +33,7 @@ export function TemplateCard({ template }: { template: TemplateMeta }) {
             {template.tags.map((tag) => (
               <span
                 key={tag}
-                className="text-[11px] uppercase tracking-[0.14em] text-muted-foreground"
+                className="text-xs font-normal tracking-normal text-muted-foreground"
               >
                 {tag}
               </span>

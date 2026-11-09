@@ -12,7 +12,7 @@ export default function Home() {
 
       <div className="relative mx-auto flex w-full max-w-6xl flex-col gap-16 px-6 py-14 sm:px-8 sm:py-20">
         <header className="max-w-3xl space-y-5">
-          <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground">
+          <p className="text-sm font-normal tracking-normal text-muted-foreground">
             Design Code
           </p>
           <h1 className="text-5xl font-medium tracking-tight text-foreground sm:text-6xl">

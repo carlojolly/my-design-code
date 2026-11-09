@@ -17,7 +17,7 @@ export default function TemplatesPage() {
       <div className="relative mx-auto w-full max-w-6xl px-6 py-10 sm:px-8 sm:py-14">
         <header className="mb-12 flex flex-col gap-6 sm:mb-16 sm:flex-row sm:items-end sm:justify-between">
           <div className="max-w-2xl space-y-4">
-            <p className="text-xs uppercase tracking-[0.18em] text-muted-foreground">
+            <p className="text-sm font-normal tracking-normal text-muted-foreground">
               Template section
             </p>
             <h1 className="text-4xl font-medium tracking-tight text-foreground sm:text-5xl">
