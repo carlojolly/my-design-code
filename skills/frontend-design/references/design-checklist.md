@@ -48,6 +48,7 @@ Read `typography.md` and `taste-memory.md` before font selection.
 
 - [ ] Default display/support face is **Onest** when no other approved face is specified (`type.onest-default`). Do not assume “approved font = finished typography.”
 - [ ] **Do not use Space Grotesk** (`type.no-space-grotesk`).
+- [ ] **Do not use the bullet character •** in UI copy, labels, or separators (`type.no-bullet-char`).
 - [ ] **Do not use** the rejected tiny tracked-caps label recipe: 0.75rem / weight 500 / uppercase / 0.22em tracking (`type.section-label-tracked-caps`). Prefer the proposed sentence-case treatment pending visual approval (`type.section-label-sentence`).
 - [ ] Do not adopt `proposed` provenance fonts (General Sans, Instrument Sans, Manrope) as project defaults until the user approves them.
 - [ ] If Taste Skill / 21st / catalog code reintroduces a rejected face or decorative mono chrome, restyle to these overrides — do not fork companion packages.

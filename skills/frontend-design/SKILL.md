@@ -46,7 +46,7 @@ Also use backend templates when creating docs: `../backend-engineering/reference
 Trigger phrases: “remove this”, “never do that again”, “I don’t like X”, “stop using Y”.
 
 1. Search project `agents.md` / `decision.md` for the component → resolve `provenance_id`.
-2. If missing, search `references/provenance.md` by symptom (pill badges, glass everywhere, bounce on inputs, purple gradients, Space Grotesk, decorative mono, tracked-caps labels, etc.).
+2. If missing, search `references/provenance.md` by symptom (pill badges, glass everywhere, bounce on inputs, purple gradients, Space Grotesk, decorative mono, bullet character •, tracked-caps labels, etc.).
 3. Show the user: **source**, **skill file path**, **what it recommended**, and ask:
    - Remove from skill permanently?
    - Replace with an alternative (propose from preferred sources / `taste-memory.md`)?

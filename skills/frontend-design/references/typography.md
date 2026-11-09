@@ -10,6 +10,7 @@ Specimen: [`../assets/baseline-preferences-specimen/`](../assets/baseline-prefer
 | Rule | Provenance | Status |
 |------|------------|--------|
 | Do **not** use **Space Grotesk** | `type.no-space-grotesk` · `source:user-feedback:baseline` | rejected |
+| Do **not** use the bullet character **•** (U+2022) in UI copy, labels, separators, or decorative lists | `type.no-bullet-char` · `source:user-feedback` | rejected |
 | Do **not** use monospace for expressive headings, navigation, marketing copy, section labels, badges, or decorative “technical” styling | `type.no-decorative-mono` · `source:user-feedback:baseline` | rejected |
 | Retain monospace only when function requires it (code examples, true code UI). Tabular numbers → `font-variant-numeric: tabular-nums`, not a mono family | same | active rule |
 | Do **not** reproduce Baseline’s small uppercase label recipe as a default: **0.75rem / weight 500 / uppercase / 0.22em tracking** | `type.section-label-tracked-caps` · `source:user-feedback:baseline` | rejected |

@@ -26,6 +26,7 @@ Separate **confirmed** (user-approved) preferences from **proposed** alternative
 - 2026-11-08 — id:`type.section-label-tracked-caps` — disliked the tiny, widely tracked, uppercase “TRAINING PROGRAMS” label treatment (≈0.75rem / weight 500 / uppercase / 0.22em tracking). **Treatment rejected, not the Onest family.** Action: do not use that recipe as a default section label. Proposed replacement: `type.section-label-sentence` (awaiting visual approval). Source:`user-feedback:baseline`
 - 2026-11-08 — id:`type.no-space-grotesk` — do **not** use Space Grotesk on this user’s projects. Personal preference rule, not a claim that the font is objectively bad. Source:`user-feedback:baseline`
 - 2026-11-08 — id:`type.no-decorative-mono` — do **not** use monospace for expressive headings, navigation, marketing copy, section labels, badges, or decorative “technical” styling. Keep monospace only when function requires it (e.g. code examples). Tabular numbers do not require a monospace family. Source:`user-feedback:baseline`
+- 2026-11-09 — id:`type.no-bullet-char` — do **not** use the bullet character **•** (U+2022) in UI copy, labels, separators, or decorative lists. Prefer plain words, commas, en dashes, or structured lists without that glyph. Source:`user-feedback`
 
 <!-- Example:
 - 2026-11-08 — id:motion.animate-ui-opt-in misuse — disliked constant motion on form controls — action: keep Animate UI opt-in only; never auto-animate inputs — replaced_by: prim.input
