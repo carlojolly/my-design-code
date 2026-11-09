@@ -645,8 +645,6 @@ export default function GlassWorkspace({
                   <Layers size={18} strokeWidth={1.7} aria-hidden="true" />
                 </span>
                 <strong>{brand}</strong>
-                <span className="gw-brand-divider" />
-                <span className="gw-personal">Personal workspace</span>
               </a>
               <div className="gw-toolbar">
                 <button

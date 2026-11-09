@@ -315,16 +315,6 @@
   color: var(--gw-brand-ink);
   border-radius: 9px;
 }
-.gw-brand-divider {
-  height: 16px;
-  width: 1px;
-  background: var(--gw-line);
-  margin: 0 4px;
-}
-.gw-personal {
-  font-size: 12px;
-  color: var(--gw-muted);
-}
 .gw-toolbar {
   display: flex;
   align-items: center;
@@ -1275,10 +1265,6 @@
     font-size: 32px;
   }
   .gw-transaction-status {
-    display: none;
-  }
-  .gw-personal,
-  .gw-brand-divider {
     display: none;
   }
   .gw-panel {
