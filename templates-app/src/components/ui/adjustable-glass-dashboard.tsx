@@ -337,41 +337,53 @@ export default function GlassWorkspace({
     window.setTimeout(() => URL.revokeObjectURL(url), 1000);
     setNotice("Transactions exported.");
   }
-  const nav = (compact = false) => (
-    <nav
-      className={compact ? "gw-rail gw-glass" : "gw-dock gw-glass"}
-      aria-label={compact ? "Quick navigation" : "Workspace views"}
-    >
-      {tabs.map((tab, i) => (
-        <button
-          key={tab.id}
-          type="button"
-          aria-label={compact ? tab.label : undefined}
-          title={compact ? tab.label : undefined}
-          aria-current={view === tab.id ? "page" : undefined}
-          onClick={() => changeView(tab.id)}
-          onKeyDown={(e) => {
-            if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(e.key))
-              return;
-            e.preventDefault();
-            const next =
-              e.key === "Home"
-                ? 0
-                : e.key === "End"
-                  ? 3
-                  : (i + (e.key === "ArrowRight" ? 1 : 3)) % 4;
-            changeView(tabs[next].id);
-            (
-              e.currentTarget.parentElement?.children[next] as HTMLButtonElement
-            )?.focus();
-          }}
-        >
-          <tab.icon size={18} strokeWidth={1.7} aria-hidden="true" />
-          <span>{tab.label}</span>
-        </button>
-      ))}
-    </nav>
-  );
+  const nav = (compact = false) => {
+    const bar = (
+      <nav
+        className={compact ? "gw-rail gw-glass" : "gw-dock gw-glass"}
+        aria-label={compact ? "Quick navigation" : "Workspace views"}
+      >
+        {tabs.map((tab, i) => (
+          <button
+            key={tab.id}
+            type="button"
+            title={compact ? tab.label : undefined}
+            aria-current={view === tab.id ? "page" : undefined}
+            onClick={() => changeView(tab.id)}
+            onKeyDown={(e) => {
+              const vertical = compact
+                ? ["ArrowUp", "ArrowDown", "Home", "End"]
+                : ["ArrowLeft", "ArrowRight", "Home", "End"];
+              if (!vertical.includes(e.key)) return;
+              e.preventDefault();
+              const forward = compact
+                ? e.key === "ArrowDown"
+                : e.key === "ArrowRight";
+              const backward = compact
+                ? e.key === "ArrowUp"
+                : e.key === "ArrowLeft";
+              const next =
+                e.key === "Home"
+                  ? 0
+                  : e.key === "End"
+                    ? 3
+                    : (i + (forward ? 1 : backward ? 3 : 0)) % 4;
+              changeView(tabs[next].id);
+              (
+                e.currentTarget.parentElement?.children[
+                  next
+                ] as HTMLButtonElement
+              )?.focus();
+            }}
+          >
+            <tab.icon size={18} strokeWidth={1.7} aria-hidden="true" />
+            <span>{tab.label}</span>
+          </button>
+        ))}
+      </nav>
+    );
+    return compact ? <div className="gw-rail-slot">{bar}</div> : bar;
+  };
   const periodSelector = (label: string) =>
     cashFlowPeriods.length > 1 ? (
       <div className="gw-segment" role="group" aria-label={label}>

@@ -169,7 +169,7 @@
   isolation: isolate;
   min-height: 100svh;
   overflow: hidden;
-  padding: 38px 28px 32px;
+  padding: 20px 14px 20px;
   background: var(--gw-background);
   color: var(--gw-ink);
   font:
@@ -241,7 +241,7 @@
 }
 .gw-workspace {
   position: relative;
-  width: min(1280px, 100%);
+  width: min(1520px, 100%);
   margin: auto;
 }
 .gw-glass {
@@ -368,32 +368,91 @@
 }
 .gw-stage {
   display: flex;
-  gap: 16px;
+  gap: 12px;
   align-items: flex-start;
 }
+.gw-rail-slot {
+  position: relative;
+  width: 52px;
+  flex: none;
+  align-self: stretch;
+  z-index: 6;
+}
 .gw-rail {
+  position: absolute;
+  top: 50px;
+  left: 0;
   border-radius: 23px;
-  width: 50px;
-  padding: 8px 5px;
+  width: 52px;
+  padding: 8px 6px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  margin-top: 50px;
-  flex: none;
+  gap: 6px;
+  overflow: hidden;
+  transition:
+    width 0.32s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.32s ease;
+}
+.gw-rail:hover,
+.gw-rail:focus-within {
+  width: 158px;
+  box-shadow:
+    inset 0 1px 0
+      color-mix(
+        in srgb,
+        var(--gw-highlight) calc(var(--gw-edge) * 100%),
+        transparent
+      ),
+    inset 0 0 0 1px
+      color-mix(
+        in srgb,
+        var(--gw-highlight) calc(var(--gw-edge) * 34%),
+        transparent
+      ),
+    0 22px 48px -18px var(--gw-shadow);
 }
 .gw-rail button {
-  width: 40px;
+  width: 100%;
   height: 40px;
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0;
+  padding: 0 11px;
+  white-space: nowrap;
+  transition:
+    background 0.22s ease,
+    gap 0.32s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.gw-rail:hover button,
+.gw-rail:focus-within button {
+  gap: 10px;
+}
+.gw-rail button svg {
+  flex: none;
 }
 .gw-rail button span {
-  display: none;
+  display: inline;
+  font-size: 12px;
+  letter-spacing: -0.01em;
+  opacity: 0;
+  transform: translateX(-4px);
+  transition:
+    opacity 0.22s ease 0.04s,
+    transform 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.gw-rail:hover button span,
+.gw-rail:focus-within button span {
+  opacity: 1;
+  transform: translateX(0);
 }
 .gw-rail button[aria-current] {
   background: var(--gw-rail-active);
   box-shadow: 0 3px 8px var(--gw-soft-shadow);
+}
+.gw-rail button:not([aria-current]):hover {
+  background: var(--gw-hover);
 }
 .gw-main {
   border-radius: 27px;
@@ -1174,9 +1233,16 @@
     background: var(--gw-fallback);
   }
 }
+@media (prefers-reduced-motion: reduce) {
+  .gw-rail,
+  .gw-rail button,
+  .gw-rail button span {
+    transition: none !important;
+  }
+}
 @media (min-width: 1550px) {
   .gw-root {
-    padding-top: 65px;
+    padding: 24px 18px 24px;
   }
   .gw-main {
     padding-top: 36px;
@@ -1193,11 +1259,12 @@
 }
 @media (max-width: 1050px) {
   .gw-root {
-    padding: 24px 18px;
+    padding: 16px 12px;
   }
   .gw-main {
     padding: 25px 23px 92px;
   }
+  .gw-rail-slot,
   .gw-rail {
     display: none;
   }
