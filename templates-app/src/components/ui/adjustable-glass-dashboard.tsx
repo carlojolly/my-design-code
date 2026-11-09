@@ -629,71 +629,72 @@ export default function GlassWorkspace({
       )}
       <div className="gw-room-shade" aria-hidden="true" />
       <div className="gw-workspace">
-        <header className="gw-topbar gw-glass">
-          <a
-            className="gw-brand"
-            href="#"
-            onClick={(e) => {
-              e.preventDefault();
-              changeView("overview");
-            }}
-          >
-            <span className="gw-brand-icon">
-              <Layers size={18} strokeWidth={1.7} aria-hidden="true" />
-            </span>
-            <strong>{brand}</strong>
-            <span className="gw-brand-divider" />
-            <span className="gw-personal">Personal workspace</span>
-          </a>
-          <div className="gw-toolbar">
-            <button
-              type="button"
-              className="gw-adjust"
-              ref={settingsTrigger}
-              onClick={() => {
-                setSettingsOpen(!settingsOpen);
-                setAlerts(false);
-              }}
-              aria-expanded={settingsOpen}
-              aria-controls={`${id}-material`}
-            >
-              <Settings2 size={16} aria-hidden="true" />
-              <span>Adjust glass</span>
-            </button>
-            {!useHostTheme && (
-              <button
-                type="button"
-                className="gw-icon-button"
-                aria-label="Toggle light and dark theme"
-                onClick={toggleTheme}
-              >
-                <Sun className="gw-sun" size={17} aria-hidden="true" />
-                <Moon className="gw-moon" size={17} aria-hidden="true" />
-              </button>
-            )}
-            <button
-              type="button"
-              className="gw-icon-button gw-bell"
-              aria-label="Notifications"
-              aria-expanded={alerts}
-              onClick={() => {
-                setAlerts(!alerts);
-                setSettingsOpen(false);
-              }}
-            >
-              <Bell size={17} aria-hidden="true" />
-              <i />
-            </button>
-            {userName && (
-              <span className="gw-avatar" title={userName}>
-                {userName.slice(0, 1).toUpperCase()}
-              </span>
-            )}
-          </div>
-        </header>
         <div className="gw-stage">
           {nav(true)}
-          <main className="gw-main gw-glass">
+          <div className="gw-content">
+            <header className="gw-topbar gw-glass">
+              <a
+                className="gw-brand"
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  changeView("overview");
+                }}
+              >
+                <span className="gw-brand-icon">
+                  <Layers size={18} strokeWidth={1.7} aria-hidden="true" />
+                </span>
+                <strong>{brand}</strong>
+                <span className="gw-brand-divider" />
+                <span className="gw-personal">Personal workspace</span>
+              </a>
+              <div className="gw-toolbar">
+                <button
+                  type="button"
+                  className="gw-adjust"
+                  ref={settingsTrigger}
+                  onClick={() => {
+                    setSettingsOpen(!settingsOpen);
+                    setAlerts(false);
+                  }}
+                  aria-expanded={settingsOpen}
+                  aria-controls={`${id}-material`}
+                >
+                  <Settings2 size={16} aria-hidden="true" />
+                  <span>Adjust glass</span>
+                </button>
+                {!useHostTheme && (
+                  <button
+                    type="button"
+                    className="gw-icon-button"
+                    aria-label="Toggle light and dark theme"
+                    onClick={toggleTheme}
+                  >
+                    <Sun className="gw-sun" size={17} aria-hidden="true" />
+                    <Moon className="gw-moon" size={17} aria-hidden="true" />
+                  </button>
+                )}
+                <button
+                  type="button"
+                  className="gw-icon-button gw-bell"
+                  aria-label="Notifications"
+                  aria-expanded={alerts}
+                  onClick={() => {
+                    setAlerts(!alerts);
+                    setSettingsOpen(false);
+                  }}
+                >
+                  <Bell size={17} aria-hidden="true" />
+                  <i />
+                </button>
+                {userName && (
+                  <span className="gw-avatar" title={userName}>
+                    {userName.slice(0, 1).toUpperCase()}
+                  </span>
+                )}
+              </div>
+            </header>
+            <main className="gw-main gw-glass">
             <div className="gw-view-heading">
               <div>
                 <p className="gw-greeting">
@@ -984,8 +985,8 @@ export default function GlassWorkspace({
                 </span>
               </footer>
             )}
-            <div className="gw-desktop-dock">{nav()}</div>
-          </main>
+            </main>
+          </div>
         </div>
         {alerts && (
           <aside
