@@ -8,6 +8,10 @@ When the user dislikes a pattern, resolve its `id`, then follow the taste-feedba
 | workflow.screen-first | Build every screen before deep backend | source:our-skill | screen-first-workflow.md | decision.md | active |
 | workflow.screen-inventory | Inventory all screens + empty/loading/error before code | source:our-skill | screen-inventory.md | decision.md | active |
 | workflow.project-docs | Create agents.md, decision.md, context.md after UI approval | source:our-skill | ../backend-engineering/references/project-docs-templates.md | repo root | active |
+| rebuild.analysis-sheet | Extract layout/type/color/components from URL or screenshot before code | source:our-skill | ../rebuild-from-reference/references/analysis-sheet.md | decision.md | active |
+| rebuild.stack-shadcn | Require React+TS+Tailwind+shadcn paths; create components/ui | source:our-skill | ../rebuild-from-reference/references/stack-and-paths.md | agents.md | active |
+| rebuild.catalog-install | Install pasted 21st/shadcn catalog prompts into components/ui + demo | source:our-skill | ../rebuild-from-reference/references/catalog-component-install.md | agents.md Components | active |
+| rebuild.modes | Inspired rebuild by default; faithful only for owned/licensed refs | source:our-skill | ../rebuild-from-reference/references/rebuild-modes.md | decision.md | active |
 | checklist.unslop-20 | 20-point unslop design checklist | source:user-notes | design-checklist.md | decision.md | active |
 | craft.hero-composition | One strong hero composition; brand-first when branded | source:user-mockups | ui-craft-patterns.md | decision.md | active |
 | craft.tight-palette | Tight 3-color accent systems (examples only, not forced brands) | source:user-mockups | ui-craft-patterns.md | decision.md | active |

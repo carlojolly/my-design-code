@@ -5,11 +5,20 @@ Every recommendation below is tracked in `provenance.md`.
 
 ## Decision tree
 
-1. **New marketing / company site** → Taste Skill (`source:taste-skill`) for screen plan + browser gate; then 21st for sections; then Impeccable polish.
-2. **App screens / dashboards** → shadcn/ui (`source:shadcn-ui`) → optional motion → 21st for large blocks → craft checklist → Impeccable.
-3. **Iterate existing UI** → Impeccable steer/critique/audit/polish/detect (`source:impeccable`).
-4. **Need a section fast** → 21st search/install (`source:21st-dev`), then restyle tokens.
-5. **Need motion** → see `motion-stack.md` (`source:motion-primitives`, `source:animate-ui`).
+1. **Liked website, screenshot, mockup, or pasted catalog install prompt** → Rebuild from reference (`source:our-skill`, skill `rebuild-from-reference`) — analysis sheet → stack/paths → inspired or faithful rebuild → then checklist / Impeccable.
+2. **New marketing / company site** → Taste Skill (`source:taste-skill`) for screen plan + browser gate; then 21st for sections; then Impeccable polish.
+3. **App screens / dashboards** → shadcn/ui (`source:shadcn-ui`) → optional motion → 21st for large blocks → craft checklist → Impeccable.
+4. **Iterate existing UI** → Impeccable steer/critique/audit/polish/detect (`source:impeccable`).
+5. **Need a section fast** → 21st search/install (`source:21st-dev`), then restyle tokens.
+6. **Need motion** → see `motion-stack.md` (`source:motion-primitives`, `source:animate-ui`).
+
+## Rebuild from reference
+
+**Source:** `source:our-skill` · skill id `rebuild-from-reference` · provenance: `rebuild.analysis-sheet`, `rebuild.stack-shadcn`, `rebuild.catalog-install`, `rebuild.modes`
+
+Install: already linked from this pack under `.cursor/skills`, `.claude/skills`, and `.agents/skills` (or symlink `skills/rebuild-from-reference`).
+
+Use when the user provides a URL they like, a screenshot, or a 21st/shadcn-style component paste. Default mode is **inspired rebuild** (match composition + craft; use their brand/copy). Use **faithful install** for owned designs or licensed catalog prompts.
 
 ## shadcn/ui
 

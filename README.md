@@ -5,16 +5,18 @@ Portable skill pack for **Claude Code** and **Cursor**. Two skills orchestrate U
 | Skill | Use when |
 |-------|----------|
 | `/frontend-design` | Screens, landings, dashboards, components, unslop, taste rejection (“never do X again”) |
+| `/rebuild-from-reference` | Liked website, screenshot, mockup, or pasted 21st/shadcn install prompt → rebuild in React/TS/Tailwind |
 | `/backend-engineering` | Architecture, APIs, schema, caching, performance, audit/debug/refactor modes |
 
 ## Recommended order
 
 1. Create a GitHub (or forge) repo and connect Claude Code / Cursor  
-2. Run **frontend-design**: screen inventory → every screen → companions → checklist → a11y → UI DoD  
-3. Create root docs: `agents.md`, `decision.md`, `context.md`  
-4. Run **backend-engineering**: architecture → minimal scalable implementation → launch-ready gates  
+2. If you have a liked site / screenshot / catalog prompt, run **rebuild-from-reference** first  
+3. Run **frontend-design**: screen inventory → every screen → companions → checklist → a11y → UI DoD  
+4. Create root docs: `agents.md`, `decision.md`, `context.md`  
+5. Run **backend-engineering**: architecture → minimal scalable implementation → launch-ready gates  
 
-## Install these two skills
+## Install these skills
 
 Copy or symlink the folders:
 
@@ -22,13 +24,16 @@ Copy or symlink the folders:
 # Claude Code (project)
 mkdir -p .claude/skills
 ln -sfn ../../skills/frontend-design .claude/skills/frontend-design
+ln -sfn ../../skills/rebuild-from-reference .claude/skills/rebuild-from-reference
 ln -sfn ../../skills/backend-engineering .claude/skills/backend-engineering
 
 # Cursor (project) — also loads .claude/skills and .agents/skills
 mkdir -p .cursor/skills .agents/skills
 ln -sfn ../../skills/frontend-design .cursor/skills/frontend-design
+ln -sfn ../../skills/rebuild-from-reference .cursor/skills/rebuild-from-reference
 ln -sfn ../../skills/backend-engineering .cursor/skills/backend-engineering
 ln -sfn ../../skills/frontend-design .agents/skills/frontend-design
+ln -sfn ../../skills/rebuild-from-reference .agents/skills/rebuild-from-reference
 ln -sfn ../../skills/backend-engineering .agents/skills/backend-engineering
 ```
 
@@ -46,6 +51,7 @@ This repository already links them under `.claude/skills`, `.cursor/skills`, and
 | [21st.dev](https://21st.dev) | Catalog search/install for sections | `source:21st-dev` |
 | [Taste Skill](https://github.com/Leonxlnx/taste-skill) | Marketing sites + browser finish gate | `source:taste-skill` |
 | [Impeccable](https://github.com/pbakaus/impeccable) | Critique/audit/polish + slop detector | `source:impeccable` |
+| Rebuild from reference (this pack) | URL / screenshot / catalog-prompt → React rebuild | `source:our-skill` |
 
 ### 21st.dev CLI + MCP
 
@@ -104,6 +110,7 @@ Mockups under `skills/frontend-design/assets/` are **quality references** (Code 
 ```text
 skills/
   frontend-design/
+  rebuild-from-reference/
   backend-engineering/
 .cursor/mcp.json(.example)
 .mcp.json(.example)
