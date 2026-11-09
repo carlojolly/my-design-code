@@ -6,16 +6,32 @@ Every recommendation below is tracked in `provenance.md`.
 ## Decision tree
 
 1. **New marketing / company site** → Taste Skill (`source:taste-skill`) for screen plan + browser gate; then 21st for sections; then Impeccable polish.
-2. **App screens / dashboards** → shadcn/ui (`source:shadcn-ui`) → optional motion → 21st for large blocks → craft checklist → Impeccable.
-3. **Iterate existing UI** → Impeccable steer/critique/audit/polish/detect (`source:impeccable`).
-4. **Need a section fast** → 21st search/install (`source:21st-dev`), then restyle tokens.
+2. **App screens / dashboards / inboxes / CRM / ops** → **Risolve UI** (`source:risolve-ui`, skill `../risolve-ui`) as the go-to look. Theme → one frame → seeded data → kit → `audit_page.mjs` → correction pass → `check_ui.py`. Do not run unslop on its output.
+3. **Iterate existing UI** → If it’s an app screen in the Risolve style, stay on Risolve UI. Otherwise Impeccable steer/critique/audit/polish/detect (`source:impeccable`).
+4. **Need a marketing section fast** → 21st search/install (`source:21st-dev`), then restyle tokens.
 5. **Need motion** → see `motion-stack.md` (`source:motion-primitives`, `source:animate-ui`).
+
+## Risolve UI (go-to for app screens)
+
+**Source:** `source:risolve-ui` · `skills/risolve-ui/` · provenance: `risolve.app-screens`
+
+Calm, large, designed-by-a-person back-office look (one ink, one signal colour, tables on the sheet, faces and real numbers). Includes a themeable React + Tailwind v4 kit, `derive_theme.py`, screenshot audit, and static checker.
+
+```bash
+# From a product app after inventory:
+python3 skills/risolve-ui/scripts/derive_theme.py --ink "#14233c" --accent "#2f6bff" > app/tokens.css
+# Copy kit into the project, build the main frame, then:
+node skills/risolve-ui/scripts/audit_page.mjs http://localhost:3000 / /orders --out ui-audit
+python3 skills/risolve-ui/scripts/check_ui.py src/
+```
+
+Invoke as `/risolve-ui`. Prefer over unslop and ui-ux-pro-max for app screens. Not for marketing or landing pages.
 
 ## shadcn/ui
 
 **Source:** `source:shadcn-ui` · https://github.com/shadcn-ui/ui · provenance: `prim.shadcn-base`, `prim.button`, `prim.dialog`, `prim.input`
 
-Default accessible primitive layer (Button, Dialog, Input, etc.). Open code lands in the project.
+Default accessible primitive layer (Button, Dialog, Input, etc.). Open code lands in the project. Under Risolve UI, the kit expects a shadcn-style `cn` at `@/lib/utils`; still use shadcn for dialogs/forms that the kit doesn’t cover.
 
 ```bash
 npx shadcn@latest init

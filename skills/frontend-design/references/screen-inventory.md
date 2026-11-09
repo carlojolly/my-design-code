@@ -29,8 +29,8 @@ For each screen:
 | Success / confirmation | |
 | Desktop notes | |
 | Mobile notes | |
-| Provenance plan (ids) | e.g. prim.shadcn-base, catalog.21st-sections |
-| Source tags | e.g. source:shadcn-ui, source:21st-dev |
+| Provenance plan (ids) | e.g. risolve.app-screens, prim.shadcn-base, catalog.21st-sections |
+| Source tags | e.g. source:risolve-ui, source:shadcn-ui, source:21st-dev |
 
 ## Checklist before coding
 

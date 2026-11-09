@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: invoice-inbox-accounting
+expected_outcome: |
+  A Next.js page (with any components it needs) for an invoice inbox. It follows the Risolve method: a themed window with sidebar and sheet, a 30 px title with no subtitle, filters with counts, one full-width table on the sheet with 60 px rows, an owner column with people, values right-aligned, status pills where 'needs approval' is yellow, details in a drawer, an ask bar or none, and seeded realistic data (20+ invoices, real-sounding client and supplier names, varied amounts and dates).

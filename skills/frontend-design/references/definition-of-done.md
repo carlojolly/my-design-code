@@ -14,7 +14,8 @@ All must be true (or explicitly waived in `decision.md` with reason + timestamp)
 - [ ] Components tagged in `agents.md` with `provenance_id` + `source`
 - [ ] Material UI decisions logged in `decision.md`
 - [ ] Companion checks when installed:
-  - [ ] Impeccable critique/audit/polish and/or `impeccable detect`
+  - [ ] For app screens: Risolve UI `audit_page.mjs` + correction pass + `check_ui.py` (`risolve.audit-loop`)
+  - [ ] Impeccable critique/audit/polish and/or `impeccable detect` (skip unslop on Risolve output)
   - [ ] Taste Skill browser gate for marketing pages
 - [ ] User sign-off on the visual direction
 

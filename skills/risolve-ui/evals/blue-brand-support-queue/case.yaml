@@ -1,0 +1,4 @@
+schema_version: "1.1"
+name: blue-brand-support-queue
+expected_outcome: |
+  A queue screen built with the Risolve method but in Helpline's colours: the theme is generated from navy ink and blue accent (no Risolve green anywhere), with tinted blue-grey window and sidebar, a 30 px title, filters with counts, one table on the sheet with owner faces, SLA risk shown in yellow with the specific time left, realistic seeded tickets, and no generated tells.

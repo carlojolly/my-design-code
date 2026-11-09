@@ -9,6 +9,9 @@ When the user dislikes a pattern, resolve its `id`, then follow the taste-feedba
 | workflow.screen-first | Build every screen before deep backend | source:our-skill | screen-first-workflow.md | decision.md | active |
 | workflow.screen-inventory | Inventory all screens + empty/loading/error before code | source:our-skill | screen-inventory.md | decision.md | active |
 | workflow.project-docs | Create agents.md, decision.md, context.md after UI approval | source:our-skill | ../backend-engineering/references/project-docs-templates.md | repo root | active |
+| risolve.app-screens | Go-to look for dashboards, inboxes, CRM, ops app screens | source:risolve-ui | ../risolve-ui/SKILL.md | decision.md | active |
+| risolve.kit | React + Tailwind v4 kit (sheet, rail, table, drawer, desk) | source:risolve-ui | ../risolve-ui/assets/kit | agents.md Components | active |
+| risolve.audit-loop | Screenshot audit + correction pass + static check_ui | source:risolve-ui | ../risolve-ui/scripts | definition-of-done.md | active |
 | checklist.unslop-20 | 20-point unslop design checklist | source:user-notes | design-checklist.md | decision.md | active |
 | craft.hero-composition | One strong hero composition; brand-first when branded | source:user-mockups | ui-craft-patterns.md | decision.md | active |
 | craft.tight-palette | Tight 3-color accent systems (examples only, not forced brands) | source:user-mockups | ui-craft-patterns.md | decision.md | active |
@@ -57,6 +60,7 @@ When the user dislikes a pattern, resolve its `id`, then follow the taste-feedba
 | source | Meaning |
 |--------|---------|
 | `source:our-skill` | Defined in this pack |
+| `source:risolve-ui` | `skills/risolve-ui` — Risolve / Flavio Bernoni app-screen method |
 | `source:user-notes` | From ai-design-and-engineering-notes |
 | `source:user-mockups` / `:code-xr` / `:fluxedit` / `:palmatech` | From user reference images in `assets/` |
 | `source:user-feedback` | Direct user preference stated in chat / review |

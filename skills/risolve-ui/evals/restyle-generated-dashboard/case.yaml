@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: restyle-generated-dashboard
+expected_outcome: |
+  A rewritten dashboard.tsx (and any theme CSS or kit files) that keeps the information (revenue, users, orders, growth, recent orders, the insight) but removes the generated look: no gradients, no emoji, no 'Welcome back' or overview copy, no uppercase tracked labels, no stock greys or purple, no shadowed cards around the table, no dark or red badges. The table sits on the sheet with 60 px rows, statuses use the five-tone pill system (failed is soft red or a small mark, pending yellow), placeholder customers are replaced by realistic data, the AI insight becomes a plain answer with a number, and there is one primary action at most.
+context:
+  scaffold_script: place-files.sh

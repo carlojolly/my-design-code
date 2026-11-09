@@ -1,33 +1,38 @@
 # Dual Frontend / Backend Agent Skills
 
-Portable skill pack for **Claude Code** and **Cursor**. Two skills orchestrate UI-first product work and production-minded backend engineering, with a **provenance + taste-memory** loop so disliked patterns can be traced to their source and removed from the skill.
+Portable skill pack for **Claude Code** and **Cursor**. Frontend orchestration, **Risolve UI** as the go-to for app screens, and production-minded backend engineering — with a **provenance + taste-memory** loop so disliked patterns can be traced to their source and removed from the skill.
 
 | Skill | Use when |
 |-------|----------|
-| `/frontend-design` | Screens, landings, dashboards, components, unslop, taste rejection (“never do X again”) |
+| `/risolve-ui` | **Go-to for app screens** — dashboards, back offices, inboxes, CRMs, ops tools (calm, large, designed look; kit + audit) |
+| `/frontend-design` | Orchestrator for UI work — landings, routing companions, unslop, taste rejection (“never do X again”) |
 | `/backend-engineering` | Architecture, APIs, schema, caching, performance, audit/debug/refactor modes |
 
 ## Recommended order
 
 1. Create a GitHub (or forge) repo and connect Claude Code / Cursor  
-2. Run **frontend-design**: screen inventory → every screen → companions → checklist → a11y → UI DoD  
-3. Create root docs: `agents.md`, `decision.md`, `context.md`  
-4. Run **backend-engineering**: architecture → minimal scalable implementation → launch-ready gates  
+2. Run **frontend-design**: screen inventory → route companions  
+3. For **app screens / dashboards**, run **risolve-ui** (theme → one frame → real data → kit → audit → correction). For marketing sites, use Taste Skill via frontend-design.  
+4. Create root docs: `agents.md`, `decision.md`, `context.md`  
+5. Run **backend-engineering**: architecture → minimal scalable implementation → launch-ready gates  
 
-## Install these two skills
+## Install these skills
 
 Copy or symlink the folders:
 
 ```bash
 # Claude Code (project)
 mkdir -p .claude/skills
+ln -sfn ../../skills/risolve-ui .claude/skills/risolve-ui
 ln -sfn ../../skills/frontend-design .claude/skills/frontend-design
 ln -sfn ../../skills/backend-engineering .claude/skills/backend-engineering
 
 # Cursor (project) — also loads .claude/skills and .agents/skills
 mkdir -p .cursor/skills .agents/skills
+ln -sfn ../../skills/risolve-ui .cursor/skills/risolve-ui
 ln -sfn ../../skills/frontend-design .cursor/skills/frontend-design
 ln -sfn ../../skills/backend-engineering .cursor/skills/backend-engineering
+ln -sfn ../../skills/risolve-ui .agents/skills/risolve-ui
 ln -sfn ../../skills/frontend-design .agents/skills/frontend-design
 ln -sfn ../../skills/backend-engineering .agents/skills/backend-engineering
 ```
@@ -40,7 +45,8 @@ This repository already links them under `.claude/skills`, `.cursor/skills`, and
 
 | Tool | Role | Source id |
 |------|------|-----------|
-| [shadcn/ui](https://github.com/shadcn-ui/ui) | Accessible primitives | `source:shadcn-ui` |
+| **Risolve UI** (`skills/risolve-ui`) | Go-to look for app screens / dashboards / inboxes | `source:risolve-ui` |
+| [shadcn/ui](https://github.com/shadcn-ui/ui) | Accessible primitives (used under Risolve kit) | `source:shadcn-ui` |
 | [Motion Primitives](https://github.com/ibelick/motion-primitives) | Intentional section/hero motion | `source:motion-primitives` |
 | [Animate UI](https://github.com/imskyleen/animate-ui) | Opt-in animated shadcn/Radix swaps | `source:animate-ui` |
 | [21st.dev](https://21st.dev) | Catalog search/install for sections | `source:21st-dev` |
@@ -105,6 +111,7 @@ Mockups under `skills/frontend-design/assets/` are **quality references** (Code 
 
 ```text
 skills/
+  risolve-ui/          # go-to for app screens
   frontend-design/
   backend-engineering/
 .cursor/mcp.json(.example)

@@ -1,0 +1,6 @@
+schema_version: "1.1"
+name: redo-risolve-orders-redesign
+expected_outcome: |
+  This is the real Risolve Orders page from just before Flavio's redesign (commit 64f7e1b). What the team actually shipped next (65c9d92): the subtitle under 'Orders' removed; the title raised from 26 to 30 px; the boxed 'Inbox' panel and the boxed detail panel beside it replaced by one full-width table on the sheet whose rows open a drawer from the right; filters in a glass segmented control with counts (All, Needs you, Moving, Done); columns Order, Retailer (with logo), Product with quantity, On it (face and name of who has it), Value (right, bold) and Status; rows 60 px with 15 px text; the repeated 'All checks passed; confirmed by…' sentence and 'no date' removed; 'Needs you' pills in yellow; the ask bar docked at the bottom. A good result moves the page in the same direction on most of these points.
+context:
+  scaffold_script: place-files.sh

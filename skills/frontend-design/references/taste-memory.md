@@ -7,11 +7,22 @@ Separate **confirmed** (user-approved) preferences from **proposed** alternative
 
 ## Preferred
 
+- **Risolve UI as the go-to for app screens / dashboards / inboxes** (`risolve.app-screens`) — follow `skills/risolve-ui/` end-to-end (theme → one frame → seeded data → kit → audit → correction). Do not run unslop on its output.
+- Lessons distilled from Risolve’s own redesign (Flavio Bernoni, Grok Hackathon Pavia Nov 2026; see `skills/risolve-ui/references/evolution.md` + `assets/screenshots/history-*.png`):
+  - Tokens alone are not enough — the first kit had the right ink/font and still looked generated; the fix was **delete + enlarge**
+  - **No subtitles / explanations** under titles; counts live in segmented filters; “why” lives in the ask bar
+  - **Lists and tables sit on the sheet** (hairlines only); box only a single object (chart, map, short desk widget)
+  - **Bigger than default:** ~30 px titles, 60 px rows, 15–16 px cells, 28 px pills, 230 px rail, 1280 px content
+  - **One signal colour = done**; yellow = person must act; soft red = failed outcome; no dark pills; no stock greys
+  - **Remove sameness:** drop columns that repeat on most rows; `needs` pills state the specific reason
+  - **Plain words + real demo world:** names not codes, “12 Nov” not ISO, ≥20 rows, faces in “On it”, source tags on figures
+  - **Home is a desk** (4 small KPIs + ≤3 widgets + ask bar), not a chat with a summary on top
+  - **Re-check every time** — em dashes and boxed panels drifted back within a day without audit/`check_ui.py`
 - Tight 3-color systems with clear hierarchy (`craft.tight-palette`)
 - Real product UI in heroes (`craft.product-in-hero`, `taste.real-media`)
-- Glass used sparingly for interactive overlays / widgets, not as wallpaper (`mock.glass-card`)
-- shadcn primitives as the accessible base (`prim.shadcn-base`)
-- One intentional motion moment per page (`motion.hero-entrance`, `motion.no-stack`)
+- Glass used sparingly for floating controls / overlays (`mock.glass-card`); Risolve glass rims on toolbar/segmented/drawer close are intentional
+- shadcn primitives as the accessible base under the kit (`prim.shadcn-base`)
+- One intentional motion moment per page (`motion.hero-entrance`, `motion.no-stack`); Risolve uses slow rise (0.7 s) and gliding nav, not bounce
 - Approved user-triggered menu transitions are compatible with the restrained-motion policy (`motion.fullscreen-nav-baseline`)
 
 ### Confirmed (user feedback)
@@ -27,6 +38,7 @@ Separate **confirmed** (user-approved) preferences from **proposed** alternative
 - 2026-11-08 — id:`type.no-space-grotesk` — do **not** use Space Grotesk on this user’s projects. Personal preference rule, not a claim that the font is objectively bad. Source:`user-feedback:baseline`
 - 2026-11-08 — id:`type.no-decorative-mono` — do **not** use monospace for expressive headings, navigation, marketing copy, section labels, badges, or decorative “technical” styling. Keep monospace only when function requires it (e.g. code examples). Tabular numbers do not require a monospace family. Source:`user-feedback:baseline`
 - 2026-11-09 — id:`type.no-bullet-char` — do **not** use the bullet character **•** (U+2022) in UI copy, labels, separators, or decorative lists. Prefer plain words, commas, en dashes, or structured lists without that glyph. Source:`user-feedback`
+- 2026-11-09 — vibecoded app-screen defaults that Risolve redesigned away: header subtitles, boxed inbox+detail split, 50 px dense rows, repeated status sentences, dark/red alert pills for “needs a person”, ISO dates/codes as primary labels, placeholder “John Doe / Acme” demo data — action: route app screens to `risolve.app-screens`; do not unslop Risolve glass/off-grid radii — replaced_by: `risolve.app-screens`
 
 <!-- Example:
 - 2026-11-08 — id:motion.animate-ui-opt-in misuse — disliked constant motion on form controls — action: keep Animate UI opt-in only; never auto-animate inputs — replaced_by: prim.input

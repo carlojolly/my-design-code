@@ -1,3 +1,8 @@
+---
+name: frontend-design
+description: Orchestrates UI-first product design for Claude Code and Cursor — screen inventory, Risolve UI for app screens, Taste Skill for marketing, shadcn/21st/Motion/Animate UI/Impeccable routing, unslop checklist, a11y gates, provenance tagging, and taste-feedback so rejected patterns can be removed from the skill. Use when building or redesigning UI, landing pages, dashboards, components, or when the user rejects a look and wants it gone permanently.
+---
+
 # Frontend Design
 
 Orchestrator for frontend and design work. Companions supply craft; this skill owns workflow, gates, project docs, and the living taste ledger.
@@ -28,15 +33,15 @@ Also use backend templates when creating docs: `../backend-engineering/reference
 3. **Typography first pass:** read `references/typography.md` + rejected entries in `taste-memory.md` before choosing fonts. Default to Onest when no other approved face is specified. Keep `proposed` candidates out of production defaults. Usually one family well.
 4. Route via `references/companion-stack.md`:
    - Marketing / company site → Taste Skill patterns (and skill if installed)
-   - App UI → **shadcn/ui** primitives first
-5. Prefer **21st.dev** catalog sections before inventing large blocks (`references/twentyfirst-dev.md`). After install, restyle any companion/catalog defaults that conflict with owned overrides (Space Grotesk, decorative mono, rejected label recipe) — do not fork third-party packages.
+   - **App screens / dashboards / inboxes / CRM / ops → `/risolve-ui`** (`../risolve-ui/SKILL.md`). Prefer it over unslop and ui-ux-pro-max. Do **not** run unslop on its output (glass rims and off-grid sizes are intentional).
+5. Prefer **21st.dev** catalog sections for marketing/large blocks before inventing (`references/twentyfirst-dev.md`). For app screens, follow Risolve’s kit first. After install, restyle any companion/catalog defaults that conflict with owned overrides (Space Grotesk, decorative mono, rejected label recipe) — do not fork third-party packages.
 6. Add motion only when useful (`references/motion-stack.md`). Do not stack Animate UI + Motion Primitives + flashy 21st motion by default. Honor `prefers-reduced-motion`. Approved user-triggered fullscreen menu transitions are in-policy (`motion.fullscreen-nav-baseline`).
-7. Apply craft patterns + `references/design-checklist.md`. Never force FluxEdit / Palmatech / Code XR brand colors onto unrelated products. Optional marketing footer: `craft.footer-baseline`.
+7. Apply craft patterns + `references/design-checklist.md`. Never force FluxEdit / Palmatech / Code XR brand colors onto unrelated products. Optional marketing footer: `craft.footer-baseline`. Skip checklist items that conflict with an active Risolve build (boxed lists, oversized titles).
 8. **Tag provenance** for every non-trivial UI choice:
    - Append `decision.md` with timestamp, `source:…`, `provenance_id:…`
    - Update `agents.md` Components table: path → provenance_id → source
    - Only use patterns with status `active` in `references/provenance.md` (skip `rejected`; treat `proposed` as awaiting approval)
-9. If Impeccable is installed: `critique` → `audit` → `polish`; run `npx impeccable detect` on UI paths or the local URL when possible.
+9. If Impeccable is installed: `critique` → `audit` → `polish`; run `npx impeccable detect` on UI paths or the local URL when possible. For Risolve screens, prefer `risolve-ui`’s own `audit_page.mjs` + `check_ui.py` first.
 10. Run `references/a11y-responsive.md`.
 11. Gate on **UI definition of done** (`references/definition-of-done.md`). Get user sign-off before deep backend.
 12. Create/update `context.md`, `decision.md`, `agents.md`. If Impeccable is present, sync product narrative into `PRODUCT.md` and after UI approval run document → `DESIGN.md`.

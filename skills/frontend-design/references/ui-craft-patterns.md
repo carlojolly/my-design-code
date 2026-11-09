@@ -15,11 +15,26 @@ Open images under `../assets/` when designing.
 | CTA hierarchy | Solid primary + quieter secondary | Equal-weight twin buttons | `craft.cta-hierarchy` |
 | Glass | Frosted panels for widgets/overlays with blur + hairline border | Glass wallpaper on everything | `mock.glass-card` |
 
+## Risolve UI (go-to for app screens)
+
+**Source:** `source:risolve-ui` · full skill at `../../risolve-ui/` · provenance: `risolve.app-screens`  
+**References:** `../../risolve-ui/assets/screenshots/example-orders-coffee.png`, `history-*.png` (four columns: kit port → pre-redesign → Flavio redesign → live)
+
+For dashboards, inboxes, CRM, and ops tools, **prefer this over Code XR craft and over unslop**. Method, not a forced green brand: derive ink + accent, copy the kit, seed ≥20 real rows, audit, then run the correction pass.
+
+What the history screenshots teach at a glance:
+- Col 1–2 look “AI”: subtitles, boxed panels, small type, sameness down every row
+- Col 3–4 look designed: one full-width table, 60 px rows, yellow “needs you” with a specific reason, faces in On it, ask bar instead of page copy
+- Home became a desk (KPIs + short widgets), not a chat landing
+
+Exact sizes, pills, tokens, and “don’t copy product chrome” live in the skill — don’t re-derive them from these notes alone.
+
 ## Code XR (dashboard)
 
 **Assets:** `assets/code-xr-dashboard.jpg`, `assets/code-xr-glassy-v24.jpg`  
 **Source:** `source:user-mockups:code-xr`  
-**Example palette mood:** warm copper / terracotta glass on soft atmosphere (example only).
+**Example palette mood:** warm copper / terracotta glass on soft atmosphere (example only).  
+**Note:** For product app screens, prefer Risolve UI (`risolve.app-screens`) over this glass-widget mood unless the user asks for Code XR specifically.
 
 - Narrow frosted sidebar + modular glass widgets
 - Sprint/hero card with progress ring and teammate presence
