@@ -6,9 +6,9 @@ Goal: ship apps faster with Claude Code / Cursor by locking UI before deep backe
 
 ## Steps
 
-1. **Create a GitHub (or forge) project** and connect it to Claude Code / Cursor.
+1. **Create a GitHub project** and connect it to Claude Code / Cursor. Keep `origin` on GitHub and use `gh` for PRs (not Cursor Origin) unless the user explicitly chooses another forge.
 2. **Build the UI first.** Create every screen in the inventory. Iterate until the user is happy. Defer deep backend, auth complexity, and premature infrastructure.
-3. Use companions as routed in `companion-stack.md` (Taste Skill / shadcn / 21st / motion / Impeccable).
+3. Use companions as routed in `companion-stack.md` (rebuild-from-reference / Taste Skill / shadcn / 21st / motion / Impeccable).
 4. Tag provenance in `decision.md` and `agents.md` while building.
 5. Pass UI definition of done (`definition-of-done.md`) including a11y + checklist.
 6. On the repo root, create three markdown files (templates in backend skill):

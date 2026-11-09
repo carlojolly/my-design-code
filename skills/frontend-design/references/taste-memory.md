@@ -10,6 +10,8 @@ Agents must honor **Rejected** before applying any provenance id.
 - Glass used sparingly for interactive overlays / widgets, not as wallpaper (`mock.glass-card`)
 - shadcn primitives as the accessible base (`prim.shadcn-base`)
 - One intentional motion moment per page (`motion.hero-entrance`, `motion.no-stack`)
+- Rebuild from a liked site or screenshot via analysis sheet first (`rebuild.analysis-sheet`, `rebuild.modes`)
+- Catalog prompts land in `components/ui` with demo + deps (`rebuild.catalog-install`)
 
 ## Rejected
 

@@ -1,6 +1,6 @@
 ---
 name: frontend-design
-description: Orchestrates UI-first product design for Claude Code and Cursor — screen inventory, shadcn/21st/Motion/Animate UI/Taste Skill/Impeccable routing, unslop checklist, a11y gates, provenance tagging, and taste-feedback so rejected patterns can be removed from the skill. Use when building or redesigning UI, landing pages, dashboards, components, or when the user rejects a look and wants it gone permanently.
+description: Orchestrates UI-first product design for Claude Code and Cursor — screen inventory, shadcn/21st/Motion/Animate UI/Taste Skill/Impeccable/rebuild-from-reference routing, unslop checklist, a11y gates, provenance tagging, and taste-feedback so rejected patterns can be removed from the skill. Use when building or redesigning UI, landing pages, dashboards, components, or when the user rejects a look and wants it gone permanently.
 ---
 
 # Frontend Design
@@ -21,6 +21,7 @@ Read references on demand (do not load everything at once):
 - `references/a11y-responsive.md` — accessibility + responsive review
 - `references/definition-of-done.md` — UI approved gates
 - `assets/` — quality reference images
+- `../rebuild-from-reference/SKILL.md` — rebuild from a liked site, screenshot, or pasted catalog prompt
 
 Also use backend templates when creating docs: `../backend-engineering/references/project-docs-templates.md`.
 
@@ -29,6 +30,7 @@ Also use backend templates when creating docs: `../backend-engineering/reference
 1. Clarify product, audience, and constraints. If `context.md` exists, read it.
 2. Fill a **screen inventory** (`references/screen-inventory.md`) — every screen + empty/loading/error — before markup.
 3. Route via `references/companion-stack.md`:
+   - **Liked site / screenshot / catalog install paste** → `/rebuild-from-reference` first
    - Marketing / company site → Taste Skill patterns (and skill if installed)
    - App UI → **shadcn/ui** primitives first
 4. Prefer **21st.dev** catalog sections before inventing large blocks (`references/twentyfirst-dev.md`).
@@ -41,7 +43,7 @@ Also use backend templates when creating docs: `../backend-engineering/reference
 8. If Impeccable is installed: `critique` → `audit` → `polish`; run `npx impeccable detect` on UI paths or the local URL when possible.
 9. Run `references/a11y-responsive.md`.
 10. Gate on **UI definition of done** (`references/definition-of-done.md`). Get user sign-off before deep backend.
-11. Create/update `context.md`, `decision.md`, `agents.md`. If Impeccable is present, sync product narrative into `PRODUCT.md` and after UI approval run document → `DESIGN.md`.
+11. Create/update `context.md`, `decision.md`, `AGENTS.md` / `agents.md` (include GitHub-only forge policy when this pack’s convention applies). If Impeccable is present, sync product narrative into `PRODUCT.md` and after UI approval run document → `DESIGN.md`.
 
 ## Taste feedback (when the user rejects a look)
 
