@@ -82,6 +82,14 @@ npx impeccable detect http://localhost:<port>
 
 Keep `PRODUCT.md` / `DESIGN.md` aligned with this pack’s `context.md` (product narrative) after UI approval.
 
+## Personal overrides vs companions
+
+Owned files win for this user’s projects: `typography.md`, `taste-memory.md`, `design-checklist.md`, `motion-stack.md`, `ui-craft-patterns.md`.
+
+- Taste Skill already lists Space Grotesk among faces to avoid; this pack additionally enforces `type.no-space-grotesk`, `type.no-decorative-mono`, and `type.no-bullet-char` as **personal** rules.
+- If Taste Skill / 21st / Impeccable / catalog code suggests decorative monospace chrome, the rejected tracked-caps eyebrow, or a non-approved face, **restyle after install**. Do not fork or patch third-party skill packages to encode personal taste.
+- `proposed` fonts in `typography.md` stay out of the default pool until visual approval.
+
 ## Our pack
 
-**Source:** `source:our-skill` — inventory, checklist, craft refs, DoD, a11y, provenance, taste-memory, project docs templates.
+**Source:** `source:our-skill` — inventory, checklist, craft refs, typography, DoD, a11y, provenance, taste-memory, project docs templates.

@@ -1,0 +1,17 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "overused-font",
+        "value": "instrument sans",
+        "files": [
+          "skills/frontend-design/assets/baseline-preferences-specimen/index.html"
+        ],
+        "createdAt": "2026-11-08T22:52:50.034Z",
+        "reason": "assistant: proposed font candidate specimen awaiting user visual approval (type.candidate-instrument-sans); not a production default"
+      }
+    ]
+  }
+}
