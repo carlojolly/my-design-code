@@ -4,7 +4,9 @@ export type TemplateMeta = {
   summary: string;
   tags: string[];
   href: string;
-  previewImage: string;
+  /** Optional photo preview; prefer previewGradient for abstract templates. */
+  previewImage?: string;
+  previewGradient?: string;
   componentPath: string;
 };
 
@@ -17,8 +19,8 @@ export const templates: TemplateMeta[] = [
       "Adjustable frosted-glass personal finance workspace with cash flow, activity, savings goals, and live material controls.",
     tags: ["dashboard", "glass", "finance", "gsap"],
     href: "/templates/glassmorphism",
-    previewImage:
-      "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=70",
+    previewGradient:
+      "linear-gradient(155deg, oklch(0.97 0.01 240) 0%, oklch(0.95 0.015 200) 42%, oklch(0.94 0.02 95) 100%)",
     componentPath: "src/components/ui/adjustable-glass-dashboard.tsx",
   },
 ];

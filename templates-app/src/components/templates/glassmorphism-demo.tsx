@@ -201,9 +201,12 @@ const cashFlowPeriods: WorkspaceCashFlowPeriod[] = [
   },
 ];
 
-/** Warm living-room interior — Unsplash. */
-const BACKGROUND_IMAGE =
-  "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=2400&q=80";
+/** Clean minimal backdrop — no photo, soft cool-to-warm wash. */
+const minimalGradient = {
+  "--gw-background":
+    "linear-gradient(155deg, oklch(0.97 0.01 240) 0%, oklch(0.95 0.015 200) 42%, oklch(0.94 0.02 95) 100%)",
+  "--gw-shade": "transparent",
+} as CSSProperties;
 
 export default function GlassWorkspaceDemo(
   props: Partial<typeof settings> = {},
@@ -222,13 +225,16 @@ export default function GlassWorkspaceDemo(
       footerNote="All figures are sample data"
       savingsNote="Your progress is shown from the sample goals supplied to this demo."
       useHostTheme={s.useHostTheme}
-      style={s.useHostTheme ? undefined : warmPalette}
+      style={
+        s.useHostTheme
+          ? minimalGradient
+          : ({ ...warmPalette, ...minimalGradient } as CSSProperties)
+      }
       glass={s}
       transactions={transactions}
       goals={
         s.useHostTheme ? goals.map(({ color: _color, ...goal }) => goal) : goals
       }
-      backgroundImage={BACKGROUND_IMAGE}
     />
   );
 }
