@@ -8,6 +8,7 @@ When the user dislikes a pattern, resolve its `id`, then follow the taste-feedba
 | workflow.screen-first | Build every screen before deep backend | source:our-skill | screen-first-workflow.md | decision.md | active |
 | workflow.screen-inventory | Inventory all screens + empty/loading/error before code | source:our-skill | screen-inventory.md | decision.md | active |
 | workflow.project-docs | Create agents.md, decision.md, context.md after UI approval | source:our-skill | ../backend-engineering/references/project-docs-templates.md | repo root | active |
+| workflow.github-only | This pack’s repo uses GitHub as sole forge; push/PR via gh | source:our-skill | ../../AGENTS.md | AGENTS.md / .cursor/rules | active |
 | rebuild.analysis-sheet | Extract layout/type/color/components from URL or screenshot before code | source:our-skill | ../rebuild-from-reference/references/analysis-sheet.md | decision.md | active |
 | rebuild.stack-shadcn | Require React+TS+Tailwind+shadcn paths; create components/ui | source:our-skill | ../rebuild-from-reference/references/stack-and-paths.md | agents.md | active |
 | rebuild.catalog-install | Install pasted 21st/shadcn catalog prompts into components/ui + demo | source:our-skill | ../rebuild-from-reference/references/catalog-component-install.md | agents.md Components | active |

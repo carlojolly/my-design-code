@@ -6,10 +6,18 @@ Create these at the **repository root** with these exact names.
 
 ---
 
-## `agents.md`
+## `agents.md` / `AGENTS.md`
+
+Prefer `AGENTS.md` at the repo root (Cursor reads it). Keep `agents.md` in sync or pointing at it.
 
 ```markdown
 # Agents
+
+## Forge
+
+- Source of truth: GitHub (set `origin` to the GitHub clone URL)
+- Create and update PRs with `gh` against the default branch
+- Do not use Cursor Origin as the git remote or PR host unless the user explicitly opts in
 
 ## Map — where code lives
 
@@ -33,12 +41,14 @@ Create these at the **repository root** with these exact names.
 - …
 - Update this file when structure changes
 - Tag new UI with provenance_id + source
+- Push and open GitHub PRs with `gh`
 
 ## Agents must not
 
 - Commit secrets or `.env` files
 - Remove the Components provenance table
 - Rewrite approved UI without updating screen inventory / decision.md
+- Point `origin` at Cursor Origin or open Origin PRs by default
 - …
 ```
 

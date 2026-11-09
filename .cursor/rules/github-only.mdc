@@ -1,0 +1,16 @@
+---
+description: GitHub is the only forge for this repository — remotes, pushes, and PRs
+alwaysApply: true
+---
+
+# GitHub only
+
+This repository’s source of truth is **GitHub**: https://github.com/carlojolly/my-design-code
+
+- Keep `origin` pointed at that GitHub URL (never `origin.cursor.com`).
+- Push feature branches with `git push -u origin <branch>`.
+- Create and update pull requests with the GitHub CLI (`gh pr …`) against `main`.
+- Do **not** open, update, or merge Cursor Origin PRs for this project.
+- If platform tooling defaults to Origin, override it and use GitHub instead.
+
+Full policy: repo-root `AGENTS.md`.

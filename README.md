@@ -1,6 +1,8 @@
 # Dual Frontend / Backend Agent Skills
 
-Portable skill pack for **Claude Code** and **Cursor**. Two skills orchestrate UI-first product work and production-minded backend engineering, with a **provenance + taste-memory** loop so disliked patterns can be traced to their source and removed from the skill.
+Portable skill pack for **Claude Code** and **Cursor**. Skills orchestrate UI-first product work and production-minded backend engineering, with a **provenance + taste-memory** loop so disliked patterns can be traced to their source and removed from the skill.
+
+**Forge:** this repository is **GitHub-only** (`https://github.com/carlojolly/my-design-code`). Agents must push and open PRs on GitHub with `gh` — not Cursor Origin. See [`AGENTS.md`](./AGENTS.md) and [`.cursor/rules/github-only.mdc`](./.cursor/rules/github-only.mdc).
 
 | Skill | Use when |
 |-------|----------|
@@ -10,10 +12,10 @@ Portable skill pack for **Claude Code** and **Cursor**. Two skills orchestrate U
 
 ## Recommended order
 
-1. Create a GitHub (or forge) repo and connect Claude Code / Cursor  
+1. Create a **GitHub** repo and connect Claude Code / Cursor (`origin` = GitHub; use `gh` for PRs)  
 2. If you have a liked site / screenshot / catalog prompt, run **rebuild-from-reference** first  
 3. Run **frontend-design**: screen inventory → every screen → companions → checklist → a11y → UI DoD  
-4. Create root docs: `agents.md`, `decision.md`, `context.md`  
+4. Create root docs: `AGENTS.md` / `agents.md`, `decision.md`, `context.md`  
 5. Run **backend-engineering**: architecture → minimal scalable implementation → launch-ready gates  
 
 ## Install these skills
@@ -108,10 +110,15 @@ Mockups under `skills/frontend-design/assets/` are **quality references** (Code 
 ## Layout
 
 ```text
+AGENTS.md                 # GitHub-only forge policy + agent map
+agents.md                 # pointer → AGENTS.md
+decision.md
+context.md
 skills/
   frontend-design/
   rebuild-from-reference/
   backend-engineering/
+.cursor/rules/github-only.mdc
 .cursor/mcp.json(.example)
 .mcp.json(.example)
 .claude/skills/   # impeccable + links to our skills

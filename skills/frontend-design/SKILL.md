@@ -43,7 +43,7 @@ Also use backend templates when creating docs: `../backend-engineering/reference
 8. If Impeccable is installed: `critique` → `audit` → `polish`; run `npx impeccable detect` on UI paths or the local URL when possible.
 9. Run `references/a11y-responsive.md`.
 10. Gate on **UI definition of done** (`references/definition-of-done.md`). Get user sign-off before deep backend.
-11. Create/update `context.md`, `decision.md`, `agents.md`. If Impeccable is present, sync product narrative into `PRODUCT.md` and after UI approval run document → `DESIGN.md`.
+11. Create/update `context.md`, `decision.md`, `AGENTS.md` / `agents.md` (include GitHub-only forge policy when this pack’s convention applies). If Impeccable is present, sync product narrative into `PRODUCT.md` and after UI approval run document → `DESIGN.md`.
 
 ## Taste feedback (when the user rejects a look)
 
